@@ -5,12 +5,6 @@ import { useState } from "react";
 import axios from "axios";
 
 
-
-
-
-
-
-
 const FitnessList =  () => {
     const [fitness, setFitness] = useState([]);
 
@@ -69,7 +63,7 @@ const FitnessList =  () => {
                            <td>{fitness.workout}</td>
                            <td>{fitness.burnedcalories}</td>
                            <td>
-                               <NavLink to={`/fitness/1/update`} className='btn btn-primary'>Edit</NavLink>
+                               <NavLink to={`/fitness/${fitness._id}/update`} className='btn btn-primary'>Edit</NavLink>
                                <button className='btn btn-danger' onClick={()=>handleDelete(fitness._id)}>Delete</button>
                            </td>
                        </tr>
